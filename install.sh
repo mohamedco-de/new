@@ -10,10 +10,10 @@ pip install -U yt-dlp
 npm install
 
 if [ ! -f .env ]; then
+  echo
+  read -rp "📱 رقمك بصيغة دولية بدون + (مثال 9665XXXXXXXX): " PHONE
   read -rp "🔑 مفتاح loader.to (اختياري، Enter للتخطي): " KEY
-  read -rp "🔑 مفتاح remove.bg (Enter للتخطي): " RBG
-  read -rp "🔑 مفتاح Gemini (Enter للتخطي): " GEM
-  printf "LOADER_API_KEY=%s\nREMOVEBG_API_KEY=%s\nGEMINI_API_KEY=%s\n" "$KEY" "$RBG" "$GEM" > .env
+  printf "PHONE=%s\nLOADER_API_KEY=%s\n" "$PHONE" "$KEY" > .env
 fi
 
 # اختصار: اكتب bot لتشغيل البوت

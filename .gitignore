@@ -2,4 +2,3 @@ node_modules/
 auth/
 .env
 *.log
-welcomed.json
